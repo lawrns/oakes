@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { EnvelopeIcon, UserCircleIcon, ClockIcon } from "@heroicons/react/24/outline";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/motion";
 import { useState } from "react";
+import MagneticButton from "./MagneticButton";
 
 export default function ContactCard() {
   const [copied, setCopied] = useState(false);
@@ -61,15 +62,14 @@ export default function ContactCard() {
             </div>
 
             {/* Email Button with Copy */}
-            <motion.button
+            <MagneticButton 
               onClick={handleCopyEmail}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full md:w-auto mx-auto flex items-center justify-center gap-3 px-8 py-4 bg-cta-ribbon text-white rounded-xl font-medium shadow-e2 hover:shadow-e2 transition-all focus-ring group"
+              variant="primary"
+              className="w-full md:w-auto mx-auto flex items-center justify-center gap-3 px-8 py-4"
             >
               <EnvelopeIcon className="w-5 h-5" />
               <span>{copied ? "Email Copied!" : "aubrey@oakes.io"}</span>
-            </motion.button>
+            </MagneticButton>
 
             {/* Response SLA */}
             <div className="mt-8 flex items-center justify-center gap-2 text-sm text-slate/70">

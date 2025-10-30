@@ -78,7 +78,7 @@ export default function TeamSection() {
         >
           {team.map((member, index) => (
             <motion.div 
-              key={index} 
+              key={index}
               variants={fadeInUp}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className="card overflow-hidden group"

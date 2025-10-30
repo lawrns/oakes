@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import portfolioData from "@/content/portfolio.json";
+import SmoothTabs from "./SmoothTabs";
+import AnimatedProgress from "./AnimatedProgress";
+import AnimatedCounter from "./AnimatedCounter";
 
 const container = {
   hidden: { opacity: 0 },
@@ -137,22 +140,40 @@ export default function PortfolioShowcase() {
           </motion.div>
         </div>
 
+        {/* Portfolio Allocation */}
+        <div className="mt-16 card p-8">
+          <h3 className="text-h3 text-navy-900 mb-8">Portfolio Allocation</h3>
+          <div className="space-y-6">
+            <AnimatedProgress value={40} label="AI Infrastructure" />
+            <AnimatedProgress value={35} label="Enterprise AI" />
+            <AnimatedProgress value={25} label="Applied Intelligence" />
+          </div>
+        </div>
+
         {/* Portfolio Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 pt-12 border-t border-border">
           <div>
-            <div className="text-3xl font-bold text-navy-900 mb-2">$2.5B+</div>
+            <div className="text-3xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={2.5} duration={2} prefix="$" suffix="B+" />
+            </div>
             <div className="text-slate text-sm">Aggregate Portfolio Valuation</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-navy-900 mb-2">3.2x</div>
+            <div className="text-3xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={3.2} duration={2.2} suffix="x" />
+            </div>
             <div className="text-slate text-sm">Average MOIC (Realized)</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-navy-900 mb-2">18 Months</div>
+            <div className="text-3xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={18} duration={1.8} suffix=" Months" />
+            </div>
             <div className="text-slate text-sm">Average Hold Period</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-navy-900 mb-2">100%</div>
+            <div className="text-3xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={100} duration={1.5} suffix="%" />
+            </div>
             <div className="text-slate text-sm">Companies Still Operating</div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import MagneticButton from "./MagneticButton";
 
 const navLinks = [
   { href: "#portfolio", label: "Portfolio" },
@@ -38,12 +39,9 @@ export default function Navigation() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              className="px-5 py-2.5 bg-burgundy-700 text-white text-sm font-semibold rounded-md hover:bg-burgundy-800 transition-colors"
-            >
+            <MagneticButton href="#contact" variant="primary" className="px-5 py-2.5 text-sm">
               Get in Touch
-            </a>
+            </MagneticButton>
           </div>
         </div>
       </div>

@@ -1,5 +1,8 @@
 "use client";
 
+import AnimatedCounter from "./AnimatedCounter";
+import TextRevealByChar from "./TextRevealByChar";
+import MagneticButton from "./MagneticButton";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -29,8 +32,10 @@ export default function HeroSection() {
             </div>
             
             {/* Headline */}
-            <h1 className="text-h1 text-navy-900 mb-6">
-              Strategic Capital for<br />AI Infrastructure
+            <h1 className="text-h1 text-navy-900 mb-6 leading-tight">
+              <TextRevealByChar text="Strategic Capital for" delay={0.2} />
+              <br />
+              <TextRevealByChar text="AI Infrastructure" delay={0.8} />
             </h1>
             
             {/* Subheading */}
@@ -64,24 +69,12 @@ export default function HeroSection() {
             
             {/* CTA with magnetic effect */}
             <div className="flex items-center gap-4">
-              <motion.a
-                href="#portfolio"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="inline-flex items-center px-6 py-3 bg-burgundy-700 text-white font-semibold rounded-md hover:bg-burgundy-800 transition-colors shadow-lg hover:shadow-xl"
-              >
+              <MagneticButton href="#portfolio" variant="primary">
                 View Portfolio
-              </motion.a>
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05, borderColor: "rgba(139, 38, 53, 0.5)" }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="inline-flex items-center px-6 py-3 border border-border text-charcoal font-semibold rounded-md hover:bg-navy-50 transition-colors"
-              >
+              </MagneticButton>
+              <MagneticButton href="#contact" variant="secondary">
                 Contact Us
-              </motion.a>
+              </MagneticButton>
             </div>
           </motion.div>
           
@@ -110,19 +103,27 @@ export default function HeroSection() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-12 border-t border-border">
           <div>
-            <div className="text-4xl font-bold text-navy-900 mb-2">$100M+</div>
+            <div className="text-4xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={100} duration={2.5} prefix="$" suffix="M+" />
+            </div>
             <div className="text-slate text-sm">Assets Under Management</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-navy-900 mb-2">12+</div>
+            <div className="text-4xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={12} duration={2} suffix="+" />
+            </div>
             <div className="text-slate text-sm">Portfolio Companies</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-navy-900 mb-2">6 Years</div>
+            <div className="text-4xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={6} duration={1.8} suffix=" Years" />
+            </div>
             <div className="text-slate text-sm">Track Record</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-navy-900 mb-2">3 Exits</div>
+            <div className="text-4xl font-bold text-navy-900 mb-2">
+              <AnimatedCounter from={0} to={3} duration={1.5} suffix=" Exits" />
+            </div>
             <div className="text-slate text-sm">Successful Realizations</div>
           </div>
         </div>
