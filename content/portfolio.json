@@ -1,0 +1,82 @@
+{
+  "featured": [
+    {
+      "id": "cryptoiq",
+      "name": "CryptoIQ",
+      "url": "https://cryptoiq.com",
+      "description": "Advanced cryptocurrency intelligence and analytics platform powered by AI",
+      "category": "Fintech & AI",
+      "thesis": "Democratizing institutional-grade crypto intelligence through AI-powered analytics",
+      "stage": "Series A",
+      "year": 2024
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "nexus-ai",
+      "name": "Nexus AI",
+      "category": "AI Infrastructure",
+      "description": "Neural architecture optimization platform"
+    },
+    {
+      "id": "quantumleap",
+      "name": "QuantumLeap",
+      "category": "Enterprise AI",
+      "description": "Predictive analytics for supply chain optimization"
+    },
+    {
+      "id": "datastream",
+      "name": "DataStream",
+      "category": "AI Infrastructure",
+      "description": "Real-time data pipeline orchestration"
+    },
+    {
+      "id": "cognition-labs",
+      "name": "Cognition Labs",
+      "category": "AI-Native Products",
+      "description": "Autonomous coding assistant for developers"
+    },
+    {
+      "id": "fusion-intelligence",
+      "name": "Fusion Intelligence",
+      "category": "Enterprise AI",
+      "description": "Multi-modal AI for document understanding"
+    },
+    {
+      "id": "hyperscale",
+      "name": "Hyperscale",
+      "category": "AI Infrastructure",
+      "description": "Distributed training infrastructure"
+    },
+    {
+      "id": "neuralpath",
+      "name": "NeuralPath",
+      "category": "Applied Intelligence",
+      "description": "AI-powered drug discovery platform"
+    },
+    {
+      "id": "apex-analytics",
+      "name": "Apex Analytics",
+      "category": "Enterprise AI",
+      "description": "Financial forecasting and risk modeling"
+    },
+    {
+      "id": "velocity-ai",
+      "name": "Velocity AI",
+      "category": "AI-Native Products",
+      "description": "Conversational AI for customer support"
+    },
+    {
+      "id": "synthesis",
+      "name": "Synthesis",
+      "category": "Applied Intelligence",
+      "description": "AI-driven materials science research"
+    },
+    {
+      "id": "paradigm",
+      "name": "Paradigm",
+      "category": "Enterprise AI",
+      "description": "Intelligent process automation"
+    }
+  ]
+}

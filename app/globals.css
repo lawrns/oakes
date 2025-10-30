@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-offwhite text-charcoal;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
+  
+  /* Subtle gradient overlay for depth */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 38, 53, 0.03), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Professional card */
+  .card {
+    @apply bg-white border border-border rounded-lg shadow-sm;
+  }
+  
+  /* Section container */
+  .section {
+    @apply py-20 md:py-32;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-content mx-auto px-6;
+  }
+}
