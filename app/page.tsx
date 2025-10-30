@@ -9,13 +9,11 @@ import TeamSection from "@/components/TeamSection";
 import ContactCard from "@/components/ContactCard";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
-import MagneticCursor from "@/components/MagneticCursor";
 
 export default function Home() {
   return (
     <>
       <ScrollProgress />
-      <MagneticCursor />
       <main className="min-h-screen bg-offwhite">
         <Navigation />
         <HeroSection />
