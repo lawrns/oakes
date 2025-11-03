@@ -28,24 +28,24 @@ const fadeInUp = {
 
 const team = [
   {
-    name: "Aubrey Oakes",
+    name: "Aubrey Sterling",
     title: "Managing Partner",
     bio: "Former VP at Sequoia Capital with 15+ years in technology investing. Led investments in 8 unicorns. MBA from Stanford GSB.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+    image: "/aubrey.png",
     linkedin: "#",
   },
   {
-    name: "Sarah Chen",
+    name: "Henry Blackstone",
     title: "Partner, Technical Due Diligence",
     bio: "Ex-Google AI Research. PhD in Computer Science from MIT. Published 20+ papers on neural architecture optimization.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+    image: "/henry.png",
     linkedin: "#",
   },
   {
-    name: "Michael Rodriguez",
+    name: "Marissa Vanderbilt",
     title: "Partner, Portfolio Operations",
     bio: "Former COO at three successful exits. Specializes in scaling B2B SaaS companies from $5M to $50M ARR.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    image: "/marissa.png",
     linkedin: "#",
   },
 ];
