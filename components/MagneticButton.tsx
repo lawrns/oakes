@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { type MouseEvent, type ReactNode, useState } from "react";
 
 interface MagneticButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   href?: string;
   onClick?: () => void;
   className?: string;
@@ -20,7 +20,9 @@ export default function MagneticButton({
 }: MagneticButtonProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (
+    e: MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setPosition({
       x: (e.clientX - rect.left - rect.width / 2) * 0.3,
