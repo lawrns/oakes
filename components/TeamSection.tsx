@@ -28,7 +28,7 @@ const fadeInUp = {
 
 const team = [
   {
-    name: "Aubrey Sterling",
+    name: "Aubrey Oakes",
     title: "Managing Partner",
     bio: "Former VP at Sequoia Capital with 15+ years in technology investing. Led investments in 8 unicorns. MBA from Stanford GSB.",
     image: "/aubrey.png",

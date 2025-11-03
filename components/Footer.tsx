@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/motion";
+import Image from "next/image";
 
 const footerLinks = {
   company: [
@@ -33,7 +34,16 @@ export default function Footer() {
         >
           {/* Brand */}
           <motion.div variants={fadeInUp} className="md:col-span-2">
-            <div className="text-3xl font-display font-bold mb-3 text-mist">Oakes</div>
+            <div className="mb-3">
+              <Image
+                src="/oaks.webp"
+                alt="Oakes"
+                width={120}
+                height={66}
+                className="h-8 w-auto"
+                priority
+              />
+            </div>
             <p className="text-slate leading-relaxed mb-6 max-w-md">
               Strategic investments in artificial intelligence and AI integrations across major international industries.
             </p>

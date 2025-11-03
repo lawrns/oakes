@@ -62,14 +62,16 @@ export default function ContactCard() {
             </div>
 
             {/* Email Button with Copy */}
-            <MagneticButton 
-              onClick={handleCopyEmail}
-              variant="primary"
-              className="w-full md:w-auto mx-auto flex items-center justify-center gap-3 px-8 py-4"
-            >
-              <EnvelopeIcon className="w-5 h-5" />
-              <span>{copied ? "Email Copied!" : "aubrey@oakes.io"}</span>
-            </MagneticButton>
+            <div className="flex justify-center">
+              <MagneticButton 
+                onClick={handleCopyEmail}
+                variant="primary"
+                className="flex items-center justify-center gap-3 px-8 py-4"
+              >
+                <EnvelopeIcon className="w-5 h-5" />
+                <span>{copied ? "Email Copied!" : "aubrey@oakes.io"}</span>
+              </MagneticButton>
+            </div>
 
             {/* Response SLA */}
             <div className="mt-8 flex items-center justify-center gap-2 text-sm text-slate/70">
