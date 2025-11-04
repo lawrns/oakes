@@ -30,14 +30,14 @@ const team = [
   {
     name: "Aubrey Oakes",
     title: "Managing Partner",
-    bio: "Former VP at Sequoia Capital with 15+ years in technology investing. Led investments in 8 unicorns. MBA from Stanford GSB.",
+    bio: "Former VP at Sequoia Capital with 15+ years in technology investing. Led investments in 8 unicorns.",
     image: "/aubrey.png",
     linkedin: "#",
   },
   {
     name: "Henry Blackstone",
     title: "Partner, Technical Due Diligence",
-    bio: "Ex-Google AI Research. PhD in Computer Science from MIT. Published 20+ papers on neural architecture optimization.",
+    bio: "Ex-Google AI Research. Published 20+ papers on neural architecture optimization.",
     image: "/henry.png",
     linkedin: "#",
   },
@@ -114,29 +114,6 @@ export default function TeamSection() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Advisory Board */}
-        <div className="mt-16 card p-8">
-          <h3 className="text-h3 text-navy-900 mb-6">Advisory Board</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate">
-            <div>
-              <div className="font-semibold text-navy-900">Dr. Andrew Ng</div>
-              <div className="text-sm">Co-founder of Google Brain, Former Chief Scientist at Baidu</div>
-            </div>
-            <div>
-              <div className="font-semibold text-navy-900">Reid Hoffman</div>
-              <div className="text-sm">Co-founder of LinkedIn, Partner at Greylock</div>
-            </div>
-            <div>
-              <div className="font-semibold text-navy-900">Fei-Fei Li</div>
-              <div className="text-sm">Professor at Stanford, Former VP/Chief Scientist at Google Cloud AI</div>
-            </div>
-            <div>
-              <div className="font-semibold text-navy-900">Marc Andreessen</div>
-              <div className="text-sm">Co-founder of Andreessen Horowitz, Netscape</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

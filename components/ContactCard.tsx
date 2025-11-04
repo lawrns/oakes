@@ -5,6 +5,7 @@ import { EnvelopeIcon, UserCircleIcon, ClockIcon } from "@heroicons/react/24/out
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/motion";
 import { useState } from "react";
 import MagneticButton from "./MagneticButton";
+import Image from "next/image";
 
 export default function ContactCard() {
   const [copied, setCopied] = useState(false);
@@ -52,8 +53,13 @@ export default function ContactCard() {
           <div className="relative z-10">
             {/* Executive Card */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-              <div className="p-4 rounded-full bg-burgundy-600/10">
-                <UserCircleIcon className="w-12 h-12 text-gold" strokeWidth={1.5} />
+              <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                <Image
+                  src="/aubrey.png"
+                  alt="Aubrey Oakes"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-display font-bold mb-1 text-mist">Aubrey Oakes</h3>

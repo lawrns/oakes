@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { EnvelopeIcon, UserIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default function ContactSection() {
   return (
@@ -33,8 +34,13 @@ export default function ContactSection() {
             className="p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm"
           >
             <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="p-4 rounded-full bg-blue-500/10">
-                <UserIcon className="w-8 h-8 text-blue-400" />
+              <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                <Image
+                  src="/aubrey.png"
+                  alt="Aubrey Oakes"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="text-left">
                 <h3 className="text-2xl font-bold mb-1">Aubrey Oakes</h3>
