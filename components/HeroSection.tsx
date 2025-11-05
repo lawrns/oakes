@@ -32,7 +32,7 @@ export default function HeroSection() {
             </div>
             
             {/* Headline */}
-            <h1 className="text-h1 text-navy-900 mb-6 leading-tight">
+            <h1 className="text-h1 text-navy-900 mb-6 leading-none">
               <TextRevealByChar text="Strategic Capital for" delay={0.2} />
               <br />
               <TextRevealByChar text="AI Infrastructure" delay={0.8} />
